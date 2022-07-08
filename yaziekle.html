@@ -1,0 +1,16 @@
+{% extends "admintema.html" %}
+{% block icerik%}
+
+<form action="#" method="POST" >
+<label>Yazı Başlığı</label>
+<input name="txt_yazibaslik" 
+required type="text" class="form-control" >
+
+<label>Yazı Metni</label>
+<textarea required class="form-control" ></textarea>
+
+<input type="submit" 
+class="btn btn-success btn-icon-split" value="Yayınla" >
+</form>
+
+{% endblock %}

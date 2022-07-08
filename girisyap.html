@@ -1,0 +1,82 @@
+<html> 
+<head>
+                <meta charset="utf-8">
+                <title>{{ sayfabasligi }}</title>
+                
+                <link rel="stylesheet" 
+                href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+              <link rel="stylesheet" href="{{ url_for('static', filename='css/stil.css') }}" />
+              
+
+<style>
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+</style>
+
+</head> 
+<body>
+
+<div class="container login-container">
+        <div class="row">
+                <div class="col-md-2" ></div>
+                <div class="col-md-8 login-form-1">
+                <h3>Blog Girişi</h3>
+                <form action="/girisyap" method="POST" >
+                        <div class="form-group">
+                                <input class="form-control" type="text" name="kadi" required placeholder="Kullanıcı Adı"> <br>
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" type="password" name="sifre" required placeholder="Şifre"> <br>
+                        </div>
+                        <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Giriş Yap" />
+                        </div>
+                        <div class="form-group">
+                                <a href="#" class="ForgetPwd">Şifremi Unuttum</a>
+                        </div>
+
+
+                        {% if error %}
+                        <p class="alert alert-danger" >{{error}}</p>
+                        {% endif %}
+                </form>
+                
+        <div class="col-md-2" ></div>
+        
+        </div>
+
+
+
+</body> </html>
