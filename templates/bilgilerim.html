@@ -1,0 +1,18 @@
+{% extends "admintema.html" %}
+{% block icerik%}
+
+<form action="#" method="POST" >
+<label>Ad</label>
+<input type="text" class="form-control" value="{{ bilgiler.ad }}" name="txt_ad" />
+
+<label>Soyad</label>
+<input type="text" class="form-control" value="{{ bilgiler.soyad }}" name="txt_soyad" />
+
+<label>Profil Resmi</label>
+<input type="text" class="form-control" value="{{ bilgiler.profilresmi }}" name="resimyol" />
+
+<input type="submit" 
+class="btn btn-success btn-icon-split" value="Güncelle" >
+</form>
+
+{% endblock %}

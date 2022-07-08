@@ -1,0 +1,26 @@
+{% extends "tema.html" %}
+
+{% block icerik %}
+
+{% for i in yaziListe %}
+<div  class="row blogsayfa" >
+        <div class="col-md-4" style="margin-left: 100px;"><img width="310" class="img-fluid" src="{{ url_for('static',filename='img/') }}{{i.baslikresim}}" /></div>
+        <div class="col-md-6" >
+            <div class="row" >
+                    <a class="baslikLink" href="#" > {{i.baslik}}</a>
+            </div>
+            <div class="row" >
+                    {{i.yazikisaicerik}}
+            
+                <br/><br/><br/>
+                {{i.yazarIsim}} - {{i.yayintarihi}}
+            </div>
+        </div>
+</div>
+
+
+{%endfor%}
+
+    
+
+{% endblock %}
